@@ -1,0 +1,14 @@
+name = "rupiyakamao-worker"
+main = "src/index.js"
+compatibility_date = "2023-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rupiyakamao"
+database_id = "your-database-id"
+
+[vars]
+ENVIRONMENT = "development"
+
+# OpenAI API configuration (set via wrangler secret)
+# Run: wrangler secret put OPENAI_API_KEY
