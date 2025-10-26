@@ -1,0 +1,11 @@
+{
+  "name": "@rupiyakamao/core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0",
+    "lint": "echo \"No linting configured\" && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
