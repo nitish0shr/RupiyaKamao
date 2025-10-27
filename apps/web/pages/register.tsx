@@ -25,13 +25,13 @@ export default function Register() {
       const response = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ username: name, email, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.data.token);
         router.push('/dashboard');
       } else {
         setError(data.message || 'Registration failed');
@@ -122,7 +122,6 @@ export default function Register() {
               />
             </div>
           </div>
-
           <div>
             <button
               type="submit"
@@ -132,7 +131,6 @@ export default function Register() {
               {loading ? 'Creating account...' : 'Register'}
             </button>
           </div>
-
           <div className="text-sm text-center">
             <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
               Already have an account? Sign in
